@@ -1,0 +1,17 @@
+@model List<E_commerce.Views.Product.ProductDbViewModel>
+
+<h1>@ViewData["Title"]</h1>
+<div>
+    @foreach(var i in Model)
+    {
+        
+        <a asp-action="GetProduct" asp-controller="Product" asp-route-Id ="@i.Id">
+        <span>
+            @* <img width="50px" src="@i.Image_path"></img>  *@
+            <img width="50px" src="@i.Image_Path">
+            <p>@i.Product_Name</p>
+            <p>@i.Product_Price</p>
+        </span>
+        </a>
+    }
+</div>

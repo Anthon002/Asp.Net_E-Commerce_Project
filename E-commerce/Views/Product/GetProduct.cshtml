@@ -1,0 +1,17 @@
+@model E_commerce.Views.Product.ProductDbViewModel
+
+<div>
+    @Model.Product_Name
+    <img src="~/@Model.Image_Path" width="50px">
+    @Model.Image_Path
+    @Model.Product_Price
+    <div>
+        <form method="post" asp-action="Add_Cart" asp-controller="Product">
+            <input type="hidden" asp-for="Id" value="@Model.Id">
+            <a asp-action="Add_Cart" asp-controller="Product" asp-route-Id="@Model.Id">
+                Add To Cart
+            </a>
+        </form>
+    </div>
+
+</div>

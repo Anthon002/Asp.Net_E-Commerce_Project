@@ -1,0 +1,15 @@
+@model Products_ViewModel
+
+<div>
+    <form method='post' asp-controller="Product" asp-action="AddProduct" enctype="multipart/form-data">
+        @* @@We are currently trying to add the form for a product object including the 
+        @@ image which we would use a file type (Look in chatgpt for the controller implementation of the image saving) *@
+        <label for="Product_Name">Name of Product</label>
+        <input type="text" asp-for="Product_Name" name="Product_Name">
+        <label for="Product_Price">Price</label>
+        <input type="number" asp-for="Product_Price" name="Product_Price">
+        <label for="Product_Image" >Upload Image</label>
+        <input asp-for="Product_Image" name="Product_Image">
+        <input type="submit" value="Add">
+    </form>
+</div>

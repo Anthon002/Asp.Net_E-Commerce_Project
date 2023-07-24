@@ -1,0 +1,21 @@
+@model List<E_commerce.Views.Product.ProductDbViewModel>
+
+<div>
+    @{double j = 0;}
+    
+    @foreach( var i in @Model)
+    {
+        <p> @i.Product_Name</p>
+        <form method="post" asp-action="Update_Item_Cart_remove" asp-controller="Product">
+            <input type="hidden" name="Id" value="@i.Id">
+            <input type="submit" value="-">
+        </form>
+
+        <form method="post" asp-action="Update_Item_Cart_add" asp-controller="Product">
+            <input type="hidden" name="Id" value="@i.Id">
+            @i.Number_of_items <input type="submit" value="+">
+        </form>
+        j+= @i.Total_Price;
+    }
+    Total Price: @j
+</div>

@@ -1,0 +1,21 @@
+E-commerce website:
+
+1)Login and Registration
+2)User model, Product Model(open to all), Order Model (exclusive to user), Order history (exclusive to admin)
+3)make Product Model
+	make form to add product
+		id,Product_name,Product_price,Data_added,Product_image;
+	make each product a link to the details of the click product
+		what to put in product details
+			should have product img
+			should have product price
+			should have add-to-cart
+			use a DTO 
+	have "add to cart" under the product in the product_details page
+4)make Order Model
+		id,Time_added(when purchase button is clicked), products_ordered
+	order view page should have the total price
+	make added products in a list
+	each item should have add extra or remove then collate the new price automatically
+5)Make Order_history Model
+	make the orders be grouped by instance of purchase 

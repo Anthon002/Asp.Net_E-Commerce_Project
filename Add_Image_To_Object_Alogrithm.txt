@@ -1,0 +1,11 @@
+1) Create the property : public IFormFile Image {get; set}
+2) Create a form, no need for type rather asp-for="Image"
+3) Dependency Inject IWebHostEnvironment _webHostEnv so instead of manually saving your img folder directory
+	you save it on a server(note: while the img is saved in a dir, it will also be Server/dir so webhost for server, then folder for dir)
+4) 	var folder = "directory/of/img"; // get the directory of the img and return it to folder
+	folder += object.Image.FileName + Guid.NewGuid.ToString() // add the name of the img for complete img location info, guid to give the img unique id incase of same name
+	var serverFolder = Path.Combine(_webHostEnvironment.webRouting,folder) // the complete directory
+	await object.Image.CopyToAsync(FileStream(newserverFolder,FileMode.create());
+	out of the if(object.Image != null) statement
+	add the new object
+	save changes

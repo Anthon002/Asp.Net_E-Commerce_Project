@@ -1,0 +1,4 @@
+{
+  "dotnetAcquisitionExtension.installTimeoutValue": 600,
+  "dotnet.defaultSolution": "E-commerce.sln"
+}
